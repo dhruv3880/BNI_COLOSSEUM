@@ -3,7 +3,6 @@ import React, { useRef } from "react";
 import { Keyboard, SafeAreaView, TextInput } from "react-native";
 import { Button, Image, Input, Text, View } from "tamagui";
 import { RootStackParamList } from "../navigation/MainNavigator";
-
 const Login = () => {
   const inputRefs = useRef<(TextInput | null)[]>([]);
 
