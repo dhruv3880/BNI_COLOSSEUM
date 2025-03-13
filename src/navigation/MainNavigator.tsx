@@ -1,13 +1,19 @@
 import { createStackNavigator } from "@react-navigation/stack";
-import Login from "../screens/Login";
+import GenerateCode from "../screens/GenerateCode";
 import ScreenNavigator from "./ScreenNavigator";
 
-const stack = createStackNavigator();
+export type RootStackParamList = {
+  Login: undefined;
+  GenerateCode: undefined;
+  Screens: undefined;
+};
 
+const stack = createStackNavigator<RootStackParamList>();
 const MainNavigator = () => {
   return (
-    <stack.Navigator screenOptions={{ headerShown: false }}>
+    <stack.Navigator screenOptions={{ headerShown: false }} >
       <stack.Screen name="Screens" component={ScreenNavigator} />
+      <stack.Screen name="GenerateCode" component={GenerateCode} />
     </stack.Navigator>
   );
 };

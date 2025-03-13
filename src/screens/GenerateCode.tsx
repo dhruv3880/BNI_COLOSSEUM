@@ -1,9 +1,8 @@
-import { NavigationProp, useNavigation } from "@react-navigation/native";
 import React, { useRef } from "react";
 import { Keyboard, SafeAreaView, TextInput } from "react-native";
 import { Button, Image, Input, Text, View } from "tamagui";
-import { RootStackParamList } from "../navigation/MainNavigator";
-const Login = () => {
+
+const GenerateCode = () => {
   const inputRefs = useRef<(TextInput | null)[]>([]);
 
   const handleKeyPress = (e: any, index: any) => {
@@ -18,7 +17,6 @@ const Login = () => {
       inputRefs.current[index + 1]?.focus();
     }
   };
-  const { navigate } = useNavigation<NavigationProp<RootStackParamList>>();
 
   return (
     <View flex={1} bg={"white"} onPress={() => Keyboard.dismiss()}>
@@ -39,13 +37,13 @@ const Login = () => {
         </View>
         <Text
           fontWeight={"bold"}
-          fontSize={"$10"}
-          mt={"$4"}
+          fontSize={"$9"}
+          mt={"$0.5"}
           textAlign={"center"}
         >
-          Login
+          Generate Code
         </Text>
-        <View mt={"$3"} p={"$4"}>
+        <View mt={"$2"} p={"$4"}>
           <Text fontSize={"$6"} mb={"$2"}>
             Phone No
           </Text>
@@ -62,7 +60,8 @@ const Login = () => {
               flex={1}
             />
           </View>
-          <View flexDirection="row" justifyContent="space-between" mt={"$3.5"}>
+          <Text mt={"$3.5"}>OTP</Text>
+          <View flexDirection="row" justifyContent="space-between" mt={"$1"}>
             {[...Array(6)].map((_, index) => (
               <Input
                 key={index}
@@ -80,18 +79,9 @@ const Login = () => {
               />
             ))}
           </View>
-          <Text
-            mt={"$2"}
-            textAlign="right"
-            color={"#008080"}
-            textDecorationLine={"underline"}
-            fontSize={"$5"}
-            onPress={() => navigate("GenerateCode")}
-          >
-            Generate Code
-          </Text>
+
           <Button bg={"#D11C2F"} color={"white"} fontSize={"$6"} mt={"$4"}>
-            Log In
+            Submit
           </Button>
 
           <View
@@ -118,4 +108,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default GenerateCode;
