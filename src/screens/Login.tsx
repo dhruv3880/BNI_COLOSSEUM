@@ -1,9 +1,9 @@
 import React from "react";
-import { Text, View } from "react-native";
+import { Text, View } from "tamagui";
 
 const Login = () => {
   return (
-    <View>
+    <View flex={1}>
       <Text>L</Text>
     </View>
   );
