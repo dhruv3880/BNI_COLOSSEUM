@@ -14,10 +14,12 @@
     "@tamagui/babel-plugin": "^1.125.24",
     "@tamagui/config": "^1.125.24",
     "@tamagui/core": "^1.125.24",
+    "@tamagui/lucide-icons": "^1.125.24",
     "expo": "~52.0.38",
     "expo-status-bar": "~2.0.1",
     "react": "18.3.1",
     "react-native": "0.76.7",
+    "react-native-reanimated": "^3.17.1",
     "tamagui": "^1.125.24"
   },
   "devDependencies": {
