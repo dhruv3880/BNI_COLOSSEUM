@@ -1,11 +1,11 @@
 import { NavigationContainer } from "@react-navigation/native";
 import { TamaguiProvider } from "@tamagui/core";
 import MainNavigator from "./src/navigation/MainNavigator";
-import { config } from "./tamagui.config";
+import tamaguiConfig from "./tamagui.config";
 
 export default function App() {
   return (
-    <TamaguiProvider config={config}>
+    <TamaguiProvider config={tamaguiConfig}>
       <NavigationContainer>
         <MainNavigator />
       </NavigationContainer>
