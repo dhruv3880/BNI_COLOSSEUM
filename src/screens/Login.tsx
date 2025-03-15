@@ -24,7 +24,7 @@ const Login = () => {
     <View flex={1} bg={"white"} onPress={() => Keyboard.dismiss()}>
       <SafeAreaView>
         <View
-          height={"35%"}
+          height={"30%"}
           bg={"#FFF8C5"}
           alignItems="center"
           justifyContent="center"
@@ -62,7 +62,10 @@ const Login = () => {
               flex={1}
             />
           </View>
-          <View flexDirection="row" justifyContent="space-between" mt={"$3.5"}>
+          <Text fontSize={"$6"} mt={"$3"}>
+            Enter Pin
+          </Text>
+          <View flexDirection="row" justifyContent="space-between" mt={"$2.5"}>
             {[...Array(6)].map((_, index) => (
               <Input
                 key={index}
@@ -90,7 +93,13 @@ const Login = () => {
           >
             Generate Code
           </Text>
-          <Button bg={"#D11C2F"} color={"white"} fontSize={"$6"} mt={"$4"}>
+          <Button
+            bg={"#D11C2F"}
+            color={"white"}
+            fontSize={"$6"}
+            mt={"$4"}
+            onPress={() => navigate("DetailsPage")}
+          >
             Log In
           </Button>
 
